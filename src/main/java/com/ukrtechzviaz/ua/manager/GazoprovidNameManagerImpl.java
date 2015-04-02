@@ -27,8 +27,8 @@ public class GazoprovidNameManagerImpl implements GazoprovidNameManager {
     }
 
     @Override
-    public void add(String name) {
-            gazoprovidNameDao.create(name);
+    public void add(String name, int d) {
+            gazoprovidNameDao.create(new GazoprovidName(name,d));
     }
 
     @Override

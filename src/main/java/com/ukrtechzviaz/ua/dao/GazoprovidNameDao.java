@@ -8,7 +8,7 @@ import com.ukrtechzviaz.ua.model.GazoprovidName;
  */
 public interface GazoprovidNameDao {
 
-    void create(String name);
+    void create(GazoprovidName name);
 
     GazoprovidName get(String name) throws NoSuchGazoprovidNameException;
 }

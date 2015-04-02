@@ -8,7 +8,7 @@ import com.ukrtechzviaz.ua.model.GazoprovidName;
  */
 public interface GazoprovidNameManager {
 
-    void add(String name);
+    void add(String name, int d);
 
     GazoprovidName find(String name) throws NoSuchGazoprovidNameException;
 

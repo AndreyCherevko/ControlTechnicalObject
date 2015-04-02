@@ -6,7 +6,7 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <!--mapping config-->
         <class>com.ukrtechzviaz.ua.model.GazoprovidName</class>
-        <class>com.ukrtechzviaz.ua.model.Title</class>
+        <class>com.ukrtechzviaz.ua.model.Passport</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />

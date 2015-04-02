@@ -14,12 +14,18 @@ public class GazoprovidName {
     @Column(name="gazoprovid_name")
     private String name;
 
+    @Column(name="diametr_gazoprovody")
+    private int diametrGazoprovody;
+
+
     public GazoprovidName() {
     }
 
-    public GazoprovidName(String name) {
+    public GazoprovidName(String name, int diametrGazoprovody) {
         this.name = name;
+        this.diametrGazoprovody = diametrGazoprovody;
     }
+
 
     public String getName() {
         return name;
@@ -27,5 +33,13 @@ public class GazoprovidName {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getDiametrGazoprovody() {
+        return diametrGazoprovody;
+    }
+
+    public void setDiametrGazoprovody(int diametrGazoprovody) {
+        this.diametrGazoprovody = diametrGazoprovody;
     }
 }

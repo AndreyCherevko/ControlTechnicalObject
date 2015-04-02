@@ -1,25 +1,22 @@
 package com.ukrtechzviaz.ua.dao;
 
-import com.ukrtechzviaz.ua.exception.NoSuchGazoprovidNameException;
-import com.ukrtechzviaz.ua.model.GazoprovidName;
+import com.ukrtechzviaz.ua.model.Passport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import java.util.List;
 
 /**
  * Created by andrey on 01.04.15.
  */
 @Repository
-public class GazoprovidNameDaoImp implements GazoprovidNameDao{
+public class PassportDaoImpl implements PassportDao {
 
-    private final String GET="from GazoprovidName g where g.name = :name";
     @Autowired
     private EntityManagerFactory entityManagerFactory;
 
-    public GazoprovidNameDaoImp() {
+    public PassportDaoImpl() {
     }
 
     public void setEntityManagerFactory(EntityManagerFactory entityManagerFactory) {
@@ -31,21 +28,15 @@ public class GazoprovidNameDaoImp implements GazoprovidNameDao{
     }
 
     @Override
-    public void create(GazoprovidName name) {
+    public void create(Passport passport) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        entityManager.persist(name);
+        entityManager.persist(passport);
         entityManager.getTransaction().commit();
     }
 
     @Override
-    public GazoprovidName get(String name) throws NoSuchGazoprovidNameException {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        List<GazoprovidName> gazoprovidName = entityManager.createQuery(GET).setParameter("name",name).getResultList();
-        if(gazoprovidName.isEmpty())
-            throw new NoSuchGazoprovidNameException();
-        return gazoprovidName.get(0);
+    public void update(Passport passport) {
+
     }
-
-
 }
