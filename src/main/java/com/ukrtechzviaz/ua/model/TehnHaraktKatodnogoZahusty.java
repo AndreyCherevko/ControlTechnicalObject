@@ -18,25 +18,26 @@ public class TehnHaraktKatodnogoZahusty {
     @Column(name="date_montazhu")
     private Date dateMontazhu;
 
-    @ManyToOne
-    @JoinColumn(name="odunutsia_obladnannia")
-    private OdunutsiaObladnannia odunutsiaObladnannia;
 
-    //@Column(name="type_peretvoriuvacha",length = 15)
-    //private String typePeretvoriuvacha;
+    @Column(name="type_peretvoriuvacha",length = 15)
+    private String typePeretvoriuvacha;
 
-    //@Column(name="vurobnuk",length = 20)
-    //private String vurobnuk;
+    @Column(name="vurobnuk",length = 20)
+    private String vurobnuk;
 
     @Column(name="data_vupysky")
     private Date dataVupysky;
 
-    //@Column(name = "number_zavodskii")
-    //private int numberZavodskii;
+    @Column(name = "number_zavodskii")
+    private int numberZavodskii;
 
-    @Column(name = "type_pokruttia", length = 15)
+    @Column(name = "type_pokruttia", length = 25)
     @Enumerated(EnumType.STRING)
     private TupZahusnogoPokruttia typePokruttia;
+
+    @OneToOne
+    @JoinColumn(name="passport_id")
+    private Passport passport;
 
     @Column(name = "potuzhnist")
     private int P;
@@ -68,11 +69,14 @@ public class TehnHaraktKatodnogoZahusty {
     public TehnHaraktKatodnogoZahusty() {
     }
 
-    public TehnHaraktKatodnogoZahusty(Date dateMontazhu, OdunutsiaObladnannia odunutsiaObladnannia, Date dataVupysky, TupZahusnogoPokruttia typePokruttia, int p, int u, boolean telecontrol, String sposibZahusty, boolean sposibZahustyYes, String typeLichilnuka, int kilkLichilnika, int r, String prumitka) {
+    public TehnHaraktKatodnogoZahusty(Date dateMontazhu, String typePeretvoriuvacha, String vurobnuk, Date dataVupysky, int numberZavodskii, TupZahusnogoPokruttia typePokruttia, Passport passport, int p, int u, boolean telecontrol, String sposibZahusty, boolean sposibZahustyYes, String typeLichilnuka, int kilkLichilnika, int r, String prumitka) {
         this.dateMontazhu = dateMontazhu;
-        this.odunutsiaObladnannia = odunutsiaObladnannia;
+        this.typePeretvoriuvacha = typePeretvoriuvacha;
+        this.vurobnuk = vurobnuk;
         this.dataVupysky = dataVupysky;
+        this.numberZavodskii = numberZavodskii;
         this.typePokruttia = typePokruttia;
+        this.passport = passport;
         P = p;
         U = u;
         this.telecontrol = telecontrol;
@@ -100,12 +104,28 @@ public class TehnHaraktKatodnogoZahusty {
         this.dateMontazhu = dateMontazhu;
     }
 
-    public OdunutsiaObladnannia getOdunutsiaObladnannia() {
-        return odunutsiaObladnannia;
+    public String getTypePeretvoriuvacha() {
+        return typePeretvoriuvacha;
     }
 
-    public void setOdunutsiaObladnannia(OdunutsiaObladnannia odunutsiaObladnannia) {
-        this.odunutsiaObladnannia = odunutsiaObladnannia;
+    public void setTypePeretvoriuvacha(String typePeretvoriuvacha) {
+        this.typePeretvoriuvacha = typePeretvoriuvacha;
+    }
+
+    public String getVurobnuk() {
+        return vurobnuk;
+    }
+
+    public void setVurobnuk(String vurobnuk) {
+        this.vurobnuk = vurobnuk;
+    }
+
+    public int getNumberZavodskii() {
+        return numberZavodskii;
+    }
+
+    public void setNumberZavodskii(int numberZavodskii) {
+        this.numberZavodskii = numberZavodskii;
     }
 
     public Date getDataVupysky() {
@@ -194,6 +214,14 @@ public class TehnHaraktKatodnogoZahusty {
 
     public void setPrumitka(String prumitka) {
         this.prumitka = prumitka;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
     }
 }
 

@@ -43,10 +43,14 @@ public class PlanovoZapobizhniRobotu {
     @Column(name="opir_zazeml_zahusn")
     private int zahR;
 
+    @OneToOne
+    @JoinColumn(name="passport_id")
+    private Passport passport;
+
     public PlanovoZapobizhniRobotu() {
     }
 
-    public PlanovoZapobizhniRobotu(Date pochatkovaDataRemonty, Date kinzhevaDataRemonty, TupRemonty type, String opusRobit, int vstanRezhimUkz, int vvimknP, int vvumkP, int anodR, int zahR) {
+    public PlanovoZapobizhniRobotu(Passport passport, Date pochatkovaDataRemonty, Date kinzhevaDataRemonty, TupRemonty type, String opusRobit, int vstanRezhimUkz, int vvimknP, int vvumkP, int anodR, int zahR) {
         this.pochatkovaDataRemonty = pochatkovaDataRemonty;
         this.kinzhevaDataRemonty = kinzhevaDataRemonty;
         this.type = type;
@@ -128,5 +132,21 @@ public class PlanovoZapobizhniRobotu {
 
     public void setZahR(int zahR) {
         this.zahR = zahR;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

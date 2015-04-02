@@ -7,21 +7,22 @@ import javax.persistence.*;
  * Цей клас описує титульний аркуш паспорту установки катодного захисту, як сутність БД.
  */
 @Entity
-@Table(name = "passopt")
+@Table(name = "passport")
 public class Passport {
 
+    @ManyToOne
+    @JoinColumn(name="company_name")
+    private NazvuKompanii companyName;
 
-    @Column(name="company_name",length=20)
-    private String companyName;
-
-    @Column(name="filial_name",length=20)
-    private String filialName;
+    @ManyToOne
+    @JoinColumn(name="filial_name")
+    private NazvuFilii filialName;
 
     @Column(name="pidrozdil_name",length = 20)
     private String pidrozdilName;
 
     @Id
-    @Column(name="passport_id")
+    @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -35,10 +36,14 @@ public class Passport {
     @Column(name="misto", length = 20)
     private String misto;
 
+    @OneToOne(mappedBy = "passport")
+    private ZagalniDani zagalniDani;
+
+
     public Passport() {
     }
 
-    public Passport(String companyName, String filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto) {
+    public Passport(NazvuKompanii companyName, NazvuFilii filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto) {
         this.companyName = companyName;
         this.filialName = filialName;
         this.pidrozdilName = pidrozdilName;
@@ -47,19 +52,19 @@ public class Passport {
         this.misto = misto;
     }
 
-    public String getCompanyName() {
+    public NazvuKompanii getCompanyName() {
         return companyName;
     }
 
-    public void setCompanyName(String companyName) {
+    public void setCompanyName(NazvuKompanii companyName) {
         this.companyName = companyName;
     }
 
-    public String getFilialName() {
+    public NazvuFilii getFilialName() {
         return filialName;
     }
 
-    public void setFilialName(String filialName) {
+    public void setFilialName(NazvuFilii filialName) {
         this.filialName = filialName;
     }
 
@@ -101,5 +106,13 @@ public class Passport {
 
     public void setMisto(String misto) {
         this.misto = misto;
+    }
+
+    public ZagalniDani getZagalniDani() {
+        return zagalniDani;
+    }
+
+    public void setZagalniDani(ZagalniDani zagalniDani) {
+        this.zagalniDani = zagalniDani;
     }
 }

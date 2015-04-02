@@ -6,7 +6,14 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <!--mapping config-->
         <class>com.ukrtechzviaz.ua.model.GazoprovidName</class>
-        <class>com.ukrtechzviaz.ua.model.Title</class>
+        <class>com.ukrtechzviaz.ua.model.Passport</class>
+        <class>com.ukrtechzviaz.ua.model.AnodneZazemlennia</class>
+        <class>com.ukrtechzviaz.ua.model.EksplyatazhiinuiKontrol</class>
+        <class>com.ukrtechzviaz.ua.model.PlanovoZapobizhniRobotu</class>
+        <class>com.ukrtechzviaz.ua.model.TehnHaraktKatodnogoZahusty</class>
+        <class>com.ukrtechzviaz.ua.model.ZagalniDani</class>
+        <class>com.ukrtechzviaz.ua.model.NazvuKompanii</class>
+        <class>com.ukrtechzviaz.ua.model.NazvuFilii</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />

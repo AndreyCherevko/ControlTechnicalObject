@@ -1,8 +1,6 @@
 package com.ukrtechzviaz.ua.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -12,6 +10,14 @@ import java.util.Date;
 @Entity
 @Table(name="eksplyatazhiinui_kontrol")
 public class EksplyatazhiinuiKontrol {
+
+    @Id
+    @Column(name="id")
+    private int id;
+
+    @OneToOne
+    @JoinColumn(name="passport_id")
+    private Passport passport;
 
     @Column(name="data_kontrol")
     private Date dataKontrol;
@@ -58,7 +64,7 @@ public class EksplyatazhiinuiKontrol {
     public EksplyatazhiinuiKontrol() {
     }
 
-    public EksplyatazhiinuiKontrol(Date dataKontrol, Date vremiaKontrol, int pochankovaRobotaStrymy, int pochankovaRobotaNaprygu, int pochankoviiPotenzhvklvkl, int pochankoviiPotenzhvklvukl, int vstanovlenuiStrymRobotu, int vstanobleniiRobotaNuprygu, int vstanovlenuiiPotenzhvkl, int vstanovlenuiiPotenzhvukl, int p, int pokazhLIchilnukaChasy, int chasProst, String prumitku) {
+    public EksplyatazhiinuiKontrol(Passport passport, Date dataKontrol, Date vremiaKontrol, int pochankovaRobotaStrymy, int pochankovaRobotaNaprygu, int pochankoviiPotenzhvklvkl, int pochankoviiPotenzhvklvukl, int vstanovlenuiStrymRobotu, int vstanobleniiRobotaNuprygu, int vstanovlenuiiPotenzhvkl, int vstanovlenuiiPotenzhvukl, int p, int pokazhLIchilnukaChasy, int chasProst, String prumitku) {
         this.dataKontrol = dataKontrol;
         this.vremiaKontrol = vremiaKontrol;
         this.pochankovaRobotaStrymy = pochankovaRobotaStrymy;
@@ -185,5 +191,21 @@ public class EksplyatazhiinuiKontrol {
 
     public void setPrumitku(String prumitku) {
         this.prumitku = prumitku;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
     }
 }
