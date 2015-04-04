@@ -18,6 +18,14 @@ public class Passport {
     @JoinColumn(name="filial_name")
     private NazvuFilii filialName;
 
+    @ManyToOne
+    @JoinColumn(name="anodne_zezemlennia")
+    private AnodneZazemlennia anodneZazemlennia;
+
+    @ManyToOne
+    @JoinColumn(name = "tehn_har_katodnogo_zahusty_id")
+    private TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty;
+
     @Column(name="pidrozdil_name",length = 20)
     private String pidrozdilName;
 
@@ -43,7 +51,9 @@ public class Passport {
     public Passport() {
     }
 
-    public Passport(NazvuKompanii companyName, NazvuFilii filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto) {
+    public Passport(TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty, AnodneZazemlennia anodneZazemlennia,NazvuKompanii companyName, NazvuFilii filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto) {
+        this.tehnHaraktKatodnogoZahusty = tehnHaraktKatodnogoZahusty;
+        this.anodneZazemlennia = anodneZazemlennia;
         this.companyName = companyName;
         this.filialName = filialName;
         this.pidrozdilName = pidrozdilName;
@@ -114,5 +124,21 @@ public class Passport {
 
     public void setZagalniDani(ZagalniDani zagalniDani) {
         this.zagalniDani = zagalniDani;
+    }
+
+    public AnodneZazemlennia getAnodneZazemlennia() {
+        return anodneZazemlennia;
+    }
+
+    public void setAnodneZazemlennia(AnodneZazemlennia anodneZazemlennia) {
+        this.anodneZazemlennia = anodneZazemlennia;
+    }
+
+    public TehnHaraktKatodnogoZahusty getTehnHaraktKatodnogoZahusty() {
+        return tehnHaraktKatodnogoZahusty;
+    }
+
+    public void setTehnHaraktKatodnogoZahusty(TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty) {
+        this.tehnHaraktKatodnogoZahusty = tehnHaraktKatodnogoZahusty;
     }
 }

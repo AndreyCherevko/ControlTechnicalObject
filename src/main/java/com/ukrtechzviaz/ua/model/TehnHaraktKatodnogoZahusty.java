@@ -13,6 +13,7 @@ public class TehnHaraktKatodnogoZahusty {
 
     @Id
     @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name="date_montazhu")
@@ -32,12 +33,7 @@ public class TehnHaraktKatodnogoZahusty {
     private int numberZavodskii;
 
     @Column(name = "type_pokruttia", length = 25)
-    @Enumerated(EnumType.STRING)
-    private TupZahusnogoPokruttia typePokruttia;
-
-    @OneToOne
-    @JoinColumn(name="passport_id")
-    private Passport passport;
+    private String typePokruttia;
 
     @Column(name = "potuzhnist")
     private int P;
@@ -45,14 +41,14 @@ public class TehnHaraktKatodnogoZahusty {
     @Column(name = "napruga")
     private int U;
 
+    @Column(name="strym")
+    private int A;
+
     @Column(name="telecontrol")
     private boolean telecontrol;
 
     @Column(name = "sposib_zahusty",length = 15)
     private String sposibZahusty;
-
-    @Column(name = "naiavnist_sposoby_saxusty")
-    private boolean sposibZahustyYes;
 
     @Column(name="type_lichilnuka",length = 15)
     private String typeLichilnuka;
@@ -69,23 +65,22 @@ public class TehnHaraktKatodnogoZahusty {
     public TehnHaraktKatodnogoZahusty() {
     }
 
-    public TehnHaraktKatodnogoZahusty(Date dateMontazhu, String typePeretvoriuvacha, String vurobnuk, Date dataVupysky, int numberZavodskii, TupZahusnogoPokruttia typePokruttia, Passport passport, int p, int u, boolean telecontrol, String sposibZahusty, boolean sposibZahustyYes, String typeLichilnuka, int kilkLichilnika, int r, String prumitka) {
+    public TehnHaraktKatodnogoZahusty(Date dateMontazhu, String typePeretvoriuvacha, String vurobnuk, Date dataVupysky, int numberZavodskii, String typePokruttia, int p, int u, boolean telecontrol, String sposibZahusty, String typeLichilnuka, int kilkLichilnika, int r, String prumitka, int A) {
         this.dateMontazhu = dateMontazhu;
         this.typePeretvoriuvacha = typePeretvoriuvacha;
         this.vurobnuk = vurobnuk;
         this.dataVupysky = dataVupysky;
         this.numberZavodskii = numberZavodskii;
         this.typePokruttia = typePokruttia;
-        this.passport = passport;
         P = p;
         U = u;
         this.telecontrol = telecontrol;
         this.sposibZahusty = sposibZahusty;
-        this.sposibZahustyYes = sposibZahustyYes;
         this.typeLichilnuka = typeLichilnuka;
         this.kilkLichilnika = kilkLichilnika;
         R = r;
         this.prumitka = prumitka;
+        this.A=A;
     }
 
     public int getId() {
@@ -136,11 +131,11 @@ public class TehnHaraktKatodnogoZahusty {
         this.dataVupysky = dataVupysky;
     }
 
-    public TupZahusnogoPokruttia getTypePokruttia() {
+    public String getTypePokruttia() {
         return typePokruttia;
     }
 
-    public void setTypePokruttia(TupZahusnogoPokruttia typePokruttia) {
+    public void setTypePokruttia(String typePokruttia) {
         this.typePokruttia = typePokruttia;
     }
 
@@ -176,14 +171,6 @@ public class TehnHaraktKatodnogoZahusty {
         this.sposibZahusty = sposibZahusty;
     }
 
-    public boolean isSposibZahustyYes() {
-        return sposibZahustyYes;
-    }
-
-    public void setSposibZahustyYes(boolean sposibZahustyYes) {
-        this.sposibZahustyYes = sposibZahustyYes;
-    }
-
     public String getTypeLichilnuka() {
         return typeLichilnuka;
     }
@@ -216,12 +203,12 @@ public class TehnHaraktKatodnogoZahusty {
         this.prumitka = prumitka;
     }
 
-    public Passport getPassport() {
-        return passport;
+    public int getA() {
+        return A;
     }
 
-    public void setPassport(Passport passport) {
-        this.passport = passport;
+    public void setA(int a) {
+        A = a;
     }
 }
 

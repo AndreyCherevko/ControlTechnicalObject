@@ -7,12 +7,15 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import java.util.List;
 
 /**
  * Created by andrey on 02.04.15.
  */
 @Repository
 public class AnodneZazemlenniaDaoImpl implements AnodneZazemlenniaDao {
+
+    private final String GET_ALL="from AnodneZazemlennia";
 
     @Autowired
     private EntityManagerFactory entityManagerFactory;
@@ -35,5 +38,12 @@ public class AnodneZazemlenniaDaoImpl implements AnodneZazemlenniaDao {
     @Override
     public void update(int id, AnodneZazemlennia anodneZazemlennia) {
 
+    }
+
+    @Override
+    public List<AnodneZazemlennia> getAll() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<AnodneZazemlennia> gazoprovidName = entityManager.createQuery(GET_ALL).getResultList();
+        return gazoprovidName;
     }
 }

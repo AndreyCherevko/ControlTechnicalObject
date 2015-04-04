@@ -6,11 +6,21 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <!--mapping config-->
         <class>com.ukrtechzviaz.ua.model.GazoprovidName</class>
+        <class>com.ukrtechzviaz.ua.model.Passport</class>
+        <class>com.ukrtechzviaz.ua.model.AnodneZazemlennia</class>
+        <class>com.ukrtechzviaz.ua.model.EksplyatazhiinuiKontrol</class>
+        <class>com.ukrtechzviaz.ua.model.PlanovoZapobizhniRobotu</class>
+        <class>com.ukrtechzviaz.ua.model.TehnHaraktKatodnogoZahusty</class>
+        <class>com.ukrtechzviaz.ua.model.ZagalniDani</class>
+        <class>com.ukrtechzviaz.ua.model.NazvuKompanii</class>
+        <class>com.ukrtechzviaz.ua.model.NazvuFilii</class>
+        <class>com.ukrtechzviaz.ua.model.PosadoviOsobu</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
             <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
             <property name="hibernate.connection.pool_size" value="1"/>
+            <property name="hibernate.connection.charSet" value="UTF-8"/>
         </properties>
     </persistence-unit>
 </persistence>

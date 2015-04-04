@@ -17,7 +17,7 @@ public class NazvuKompaniiDaoImpl implements NazVuKompaniiDao {
 
     private final String GET="from NazvuKompanii g where g.nazva = :name";
 
-    private final String GET_ALL="from NazvuKompani";
+    private final String GET_ALL="from NazvuKompanii";
 
     @Autowired
     private EntityManagerFactory entityManagerFactory;

@@ -1,14 +1,13 @@
 package com.ukrtechzviaz.ua.manager;
 
-import com.ukrtechzviaz.ua.dao.TehnHaraktKatodnogoZahustyDao;
+import com.ukrtechzviaz.ua.dao.interfaces.TehnHaraktKatodnogoZahustyDao;
 import com.ukrtechzviaz.ua.exception.NoSuchMainSpecificationException;
-import com.ukrtechzviaz.ua.model.OdunutsiaObladnannia;
 import com.ukrtechzviaz.ua.model.TehnHaraktKatodnogoZahusty;
-import com.ukrtechzviaz.ua.model.TupZahusnogoPokruttia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by andrey on 01.04.15.
@@ -31,12 +30,19 @@ public class TehnHaraktKatodnogoZahustyManagerImpl implements TehnHaraktKatodnog
     }
 
     @Override
-    public void add(int id, Date dateMontazhu, OdunutsiaObladnannia odunutsiaObladnannia, Date dataVupysky, TupZahusnogoPokruttia typePokruttia, int p, int u, boolean telecontrol, String sposibZahusty, boolean sposibZahustyYes, String typeLichilnuka, int kilkLichilnika, int r, String prumitka) {
-        dao.create(new TehnHaraktKatodnogoZahusty(dateMontazhu, odunutsiaObladnannia, dataVupysky, typePokruttia, p, u, telecontrol, sposibZahusty,sposibZahustyYes,typeLichilnuka,kilkLichilnika, r,prumitka));
+    public TehnHaraktKatodnogoZahusty add(Date dateMontazhu, String typePeretvoriuvacha, String vurobnuk, Date dataVupysky, int numberZavodskii, String typePokruttia, int p, int u, boolean telecontrol, String sposibZahusty, String typeLichilnuka, int kilkLichilnika, int r, String prumitka,int A) {
+        TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty = new TehnHaraktKatodnogoZahusty(dateMontazhu,typePeretvoriuvacha,vurobnuk, dataVupysky,numberZavodskii, typePokruttia, p,u, telecontrol,sposibZahusty ,typeLichilnuka,kilkLichilnika, r,prumitka,A);
+        dao.create(tehnHaraktKatodnogoZahusty);
+        return tehnHaraktKatodnogoZahusty;
     }
 
     @Override
     public TehnHaraktKatodnogoZahusty find(int numberZavodskii) throws NoSuchMainSpecificationException {
         return dao.get(numberZavodskii);
+    }
+
+    @Override
+    public List<TehnHaraktKatodnogoZahusty> findAll() {
+        return dao.getAll();
     }
 }

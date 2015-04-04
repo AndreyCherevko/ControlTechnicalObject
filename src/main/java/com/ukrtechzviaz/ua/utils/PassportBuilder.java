@@ -95,8 +95,8 @@ public class PassportBuilder {
         this.planovoZapobizhniRobotuDao = planovoZapobizhniRobotuDao;
     }
 
-    public void addPassport(NazvuKompanii companyName, NazvuFilii filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto){
-        passport = new Passport(companyName, filialName, pidrozdilName, gazoprovidName, kmGazoprovid, misto);
+    public void addPassport(TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty,AnodneZazemlennia anodneZazemlennia, NazvuKompanii companyName, NazvuFilii filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto){
+        passport = new Passport(tehnHaraktKatodnogoZahusty,anodneZazemlennia,companyName, filialName, pidrozdilName, gazoprovidName, kmGazoprovid, misto);
         passportDao.create(passport);
     }
 
@@ -105,20 +105,6 @@ public class PassportBuilder {
             throw new BrokenQueuePassportBuilderException();
         zagalniDani = new ZagalniDani(passport,protectType,geografichnaPriviazhka,startEcspl,projectOrganization,bmOrganization,zemlekorustyvach);
         zagalniDaniDao.create(zagalniDani);
-    }
-
-    public void addTehnHarKatod(Date dateMontazhu, String typePeretvoriuvacha, String vurobnuk, Date dataVupysky, int numberZavodskii, TupZahusnogoPokruttia typePokruttia, int p, int u, boolean telecontrol, String sposibZahusty, boolean sposibZahustyYes, String typeLichilnuka, int kilkLichilnika, int r, String prumitka) throws BrokenQueuePassportBuilderException {
-        if(passport==null)
-            throw new BrokenQueuePassportBuilderException();
-        tehnHaraktKatodnogoZahusty = new TehnHaraktKatodnogoZahusty(dateMontazhu, typePeretvoriuvacha,  vurobnuk, dataVupysky, numberZavodskii, typePokruttia,  passport,  p, u, telecontrol,sposibZahusty,sposibZahustyYes,typeLichilnuka, kilkLichilnika, r,prumitka);
-        tehnHaraktKatodnogoZahustyDao.create(tehnHaraktKatodnogoZahusty);
-    }
-
-    public void addAnodneZazemlennia(Date dataMontazhu, String typeElectrodiv, String vurobnuk, String kostrnAzs, int ktiElectrodiv, int glibinaZaliaginnia, int vidstanDoGazoprovody, int vidstanDoUkz, int dovzhunaAnodnogoPolia, int opirRoztikannia, int putomuiOpir, String budivelnaOrganizazhia, String prumitku) throws BrokenQueuePassportBuilderException {
-        if(passport==null)
-            throw new BrokenQueuePassportBuilderException();
-        anodneZazemlennia = new AnodneZazemlennia(passport,dataMontazhu,typeElectrodiv,vurobnuk,kostrnAzs,ktiElectrodiv, glibinaZaliaginnia, vidstanDoGazoprovody,vidstanDoUkz, dovzhunaAnodnogoPolia,opirRoztikannia,putomuiOpir, budivelnaOrganizazhia,prumitku);
-        anodneZazemlenniaDao.create(anodneZazemlennia);
     }
 
     public void addEksplyatKontrol(Date dataKontrol, Date vremiaKontrol, int pochankovaRobotaStrymy, int pochankovaRobotaNaprygu, int pochankoviiPotenzhvklvkl, int pochankoviiPotenzhvklvukl, int vstanovlenuiStrymRobotu, int vstanobleniiRobotaNuprygu, int vstanovlenuiiPotenzhvkl, int vstanovlenuiiPotenzhvukl, int p, int pokazhLIchilnukaChasy, int chasProst, String prumitku) throws BrokenQueuePassportBuilderException {

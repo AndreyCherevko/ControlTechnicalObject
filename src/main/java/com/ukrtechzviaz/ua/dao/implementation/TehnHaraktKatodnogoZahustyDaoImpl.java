@@ -17,6 +17,7 @@ import java.util.List;
 public class TehnHaraktKatodnogoZahustyDaoImpl implements TehnHaraktKatodnogoZahustyDao {
 
     private final String GET="from TehnHaraktKatodnogoZahusty";
+    private final String GET_ALL="from TehnHaraktKatodnogoZahusty";
     @Autowired
     private EntityManagerFactory entityManagerFactory;
 
@@ -51,5 +52,12 @@ public class TehnHaraktKatodnogoZahustyDaoImpl implements TehnHaraktKatodnogoZah
         if(mainSpecName.isEmpty())
             throw new NoSuchMainSpecificationException();
         return mainSpecName.get(0);
+    }
+
+    @Override
+    public List<TehnHaraktKatodnogoZahusty> getAll() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<TehnHaraktKatodnogoZahusty> mainSpecName = entityManager.createQuery(GET_ALL).getResultList();
+        return mainSpecName;
     }
 }

@@ -13,11 +13,8 @@ public class AnodneZazemlennia {
 
     @Id
     @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @OneToOne
-    @JoinColumn(name="passport_id")
-    private Passport passport;
 
     @Column(name="data_montazhy")
     private Date dataMontazhu;
@@ -61,8 +58,7 @@ public class AnodneZazemlennia {
     public AnodneZazemlennia() {
     }
 
-    public AnodneZazemlennia(Passport passport, Date dataMontazhu, String typeElectrodiv, String vurobnuk, String kostrnAzs, int ktiElectrodiv, int glibinaZaliaginnia, int vidstanDoGazoprovody, int vidstanDoUkz, int dovzhunaAnodnogoPolia, int opirRoztikannia, int putomuiOpir, String budivelnaOrganizazhia, String prumitku) {
-        this.passport = passport;
+    public AnodneZazemlennia(Date dataMontazhu, String typeElectrodiv, String vurobnuk, String kostrnAzs, int ktiElectrodiv, int glibinaZaliaginnia, int vidstanDoGazoprovody, int vidstanDoUkz, int dovzhunaAnodnogoPolia, int opirRoztikannia, int putomuiOpir, String budivelnaOrganizazhia, String prumitku) {
         this.dataMontazhu = dataMontazhu;
         this.typeElectrodiv = typeElectrodiv;
         this.vurobnuk = vurobnuk;
@@ -191,11 +187,4 @@ public class AnodneZazemlennia {
         this.prumitku = prumitku;
     }
 
-    public Passport getPassport() {
-        return passport;
-    }
-
-    public void setPassport(Passport passport) {
-        this.passport = passport;
-    }
 }
