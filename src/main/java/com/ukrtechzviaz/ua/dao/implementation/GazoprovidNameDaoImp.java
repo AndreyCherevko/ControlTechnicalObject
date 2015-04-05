@@ -42,11 +42,9 @@ public class GazoprovidNameDaoImp implements GazoprovidNameDao {
     }
 
     @Override
-    public GazoprovidName get(String name) throws NoSuchGazoprovidNameException {
+    public GazoprovidName get(String name)  {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         List<GazoprovidName> gazoprovidName = entityManager.createQuery(GET).setParameter("name",name).getResultList();
-        if(gazoprovidName.isEmpty())
-            throw new NoSuchGazoprovidNameException();
         return gazoprovidName.get(0);
     }
 

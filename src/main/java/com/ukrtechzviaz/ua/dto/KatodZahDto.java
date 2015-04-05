@@ -1,5 +1,13 @@
 package com.ukrtechzviaz.ua.dto;
 
+
+
+
+import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
+
+
 import java.util.Date;
 
 /**
@@ -7,48 +15,71 @@ import java.util.Date;
  */
 public class KatodZahDto {
 
-
+    @DateTimeFormat(pattern="MM/dd/yyyy")
     private Date dateMontazhu;
 
+    @NotEmpty(message = "?? ???? ?? ???? ???? ??????")
     private String typePeretvoriuvacha;
 
+    @NotEmpty
     private String vurobnuk;
 
+    @DateTimeFormat(pattern="MM/dd/yyyy")
     private Date dataVupysky;
 
-    private int numberZavodskii;
+    @Range(min = 0)
+    private Integer numberZavodskii;
 
+    @NotEmpty
     private String typePokruttia;
 
-    private int P;
+    @Range(min = 0)
+    private Integer P;
 
-    private int U;
+    @Range(min = 0)
+    private Integer U;
 
-    private int A;
+    @Range(min = 0)
+    private Integer A;
 
     private boolean telecontrol;
 
+    @NotEmpty
     private String sposibZahusty;
 
     private boolean sposibZahustyYes;
 
+    @NotEmpty
     private String typeLichilnuka;
 
-    private int  kilkLichilnika;
+    @Range(min = 0)
+    private Integer  kilkLichilnika;
 
-    private int R;
+    @Range(min = 0)
+    private Integer R;
 
     private String prumitka;
 
     public KatodZahDto() {
     }
 
-    public int getA() {
-        return A;
-    }
-
-    public void setA(int a) {
+    public KatodZahDto(Date dateMontazhu, String typePeretvoriuvacha, String vurobnuk, Date dataVupysky, Integer numberZavodskii, String typePokruttia, Integer p, Integer u, Integer a, boolean telecontrol, String sposibZahusty, boolean sposibZahustyYes, String typeLichilnuka, Integer kilkLichilnika, Integer r, String prumitka) {
+        this.dateMontazhu = dateMontazhu;
+        this.typePeretvoriuvacha = typePeretvoriuvacha;
+        this.vurobnuk = vurobnuk;
+        this.dataVupysky = dataVupysky;
+        this.numberZavodskii = numberZavodskii;
+        this.typePokruttia = typePokruttia;
+        P = p;
+        U = u;
         A = a;
+        this.telecontrol = telecontrol;
+        this.sposibZahusty = sposibZahusty;
+        this.sposibZahustyYes = sposibZahustyYes;
+        this.typeLichilnuka = typeLichilnuka;
+        this.kilkLichilnika = kilkLichilnika;
+        R = r;
+        this.prumitka = prumitka;
     }
 
     public Date getDateMontazhu() {
@@ -83,11 +114,11 @@ public class KatodZahDto {
         this.dataVupysky = dataVupysky;
     }
 
-    public int getNumberZavodskii() {
+    public Integer getNumberZavodskii() {
         return numberZavodskii;
     }
 
-    public void setNumberZavodskii(int numberZavodskii) {
+    public void setNumberZavodskii(Integer numberZavodskii) {
         this.numberZavodskii = numberZavodskii;
     }
 
@@ -99,20 +130,28 @@ public class KatodZahDto {
         this.typePokruttia = typePokruttia;
     }
 
-    public int getP() {
+    public Integer getP() {
         return P;
     }
 
-    public void setP(int p) {
+    public void setP(Integer p) {
         P = p;
     }
 
-    public int getU() {
+    public Integer getU() {
         return U;
     }
 
-    public void setU(int u) {
+    public void setU(Integer u) {
         U = u;
+    }
+
+    public Integer getA() {
+        return A;
+    }
+
+    public void setA(Integer a) {
+        A = a;
     }
 
     public boolean isTelecontrol() {
@@ -147,19 +186,19 @@ public class KatodZahDto {
         this.typeLichilnuka = typeLichilnuka;
     }
 
-    public int getKilkLichilnika() {
+    public Integer getKilkLichilnika() {
         return kilkLichilnika;
     }
 
-    public void setKilkLichilnika(int kilkLichilnika) {
+    public void setKilkLichilnika(Integer kilkLichilnika) {
         this.kilkLichilnika = kilkLichilnika;
     }
 
-    public int getR() {
+    public Integer getR() {
         return R;
     }
 
-    public void setR(int r) {
+    public void setR(Integer r) {
         R = r;
     }
 

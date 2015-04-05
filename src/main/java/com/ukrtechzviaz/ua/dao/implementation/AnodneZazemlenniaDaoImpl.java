@@ -13,9 +13,13 @@ import java.util.List;
  * Created by andrey on 02.04.15.
  */
 @Repository
-public class AnodneZazemlenniaDaoImpl implements AnodneZazemlenniaDao {
+public class
+        AnodneZazemlenniaDaoImpl implements AnodneZazemlenniaDao {
 
     private final String GET_ALL="from AnodneZazemlennia";
+
+
+    private final String GET_ID="from AnodneZazemlennia a where a.id = :id";
 
     @Autowired
     private EntityManagerFactory entityManagerFactory;
@@ -45,5 +49,12 @@ public class AnodneZazemlenniaDaoImpl implements AnodneZazemlenniaDao {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         List<AnodneZazemlennia> gazoprovidName = entityManager.createQuery(GET_ALL).getResultList();
         return gazoprovidName;
+    }
+
+    @Override
+    public AnodneZazemlennia find(int id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<AnodneZazemlennia> gazoprovidName = entityManager.createQuery(GET_ID).setParameter("id",id).getResultList();
+        return gazoprovidName.get(0);
     }
 }

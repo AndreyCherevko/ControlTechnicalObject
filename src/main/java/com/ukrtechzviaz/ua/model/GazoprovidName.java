@@ -42,4 +42,9 @@ public class GazoprovidName {
     public void setDiametrGazoprovody(int diametrGazoprovody) {
         this.diametrGazoprovody = diametrGazoprovody;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

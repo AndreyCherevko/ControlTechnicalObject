@@ -1,4 +1,4 @@
-<%@ page import="java.awt.*" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: andrey
@@ -33,6 +33,9 @@
             width:75px;
             text-align: left;
         }
+        .error {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -59,27 +62,44 @@
     </thead>
     <tfoot>
     <tr>
-        <form:form modelAttribute="KatodZahDto" action="/vvedenniaKat" method="post" acceptCharset="UTF-8">
-        <td> <form:input path="dateMontazhu" type="text" size="5"/></td>
-        <td> <form:input path="typePeretvoriuvacha" type="text" size="5" /></td>
-        <td> <form:input path="vurobnuk" type="text" size="5"/></td>
-        <td> <form:input path="dataVupysky" type="text" size="5"/></td>
-        <td> <form:input path="numberZavodskii" type="text" size="3"/></td>
-        <td> <form:select path="typePokruttia" type="text" size="5">
+        <form:form commandName="KatodZahDto" action="/vvedenniaKat" method="post" acceptCharset="UTF-8" >
+        <td> <form:input path="dateMontazhu"  size="5"/></td>
+        <td> <form:input path="typePeretvoriuvacha"  size="5" /></td>
+        <td> <form:input path="vurobnuk"  size="5"/></td>
+        <td> <form:input path="dataVupysky"  size="5"/></td>
+        <td> <form:input path="numberZavodskii"  size="3"/></td>
+        <td> <form:select path="typePokruttia"  size="5">
                 <form:option value="Залізний блок-бокс">Залізний блок-бокс</form:option>
                 <form:option value="Залізобетонний блок-бокс">Залізобетонний блок-бокс</form:option>
                 <form:option value="Труба сталева">Труба сталева</form:option>
             </form:select>
         </td>
-        <td> <form:input path="P" type="text" size="3"/></td>
-        <td> <form:input path="U" type="text" size="3"/></td>
-        <td> <form:input path="A" type="text" size="3"/></td>
+        <td> <form:input path="p"  size="3"/></td>
+        <td> <form:input path="u"  size="3"/></td>
+        <td> <form:input path="a"  size="3"/></td>
         <td> <form:checkboxes path="telecontrol"  items="${telecontdolCheck}"/></td>
-        <td> <form:input path="sposibZahusty" type="text" size="3"/></td>
-        <td> <form:input path="typeLichilnuka" type="text" size="3"/></td>
-        <td><form:input path="kilkLichilnika" type="text" size="5"/></td>
-        <td> <form:input path="R" type="text" size="5"/></td>
+        <td> <form:input path="sposibZahusty"  size="3"/></td>
+        <td> <form:input path="typeLichilnuka" size="3"/></td>
+        <td><form:input path="kilkLichilnika"  size="5"/></td>
+        <td> <form:input path="r"  size="5"/></td>
         <td> <form:textarea path="prumitka" rows="2" cols="10"/></td>
+    </tr>
+    <tr>
+    <td><form:errors path="*"  cssClass="error"/></td>
+    <td><form:errors path="typePeretvoriuvacha" cssClass="error"/></td>
+    <td><form:errors path="vurobnuk" cssClass="error"/></td>
+    <td><form:errors path="dataVupysky" cssClass="error"/></td>
+    <td><form:errors path="numberZavodskii" cssClass="error"/></td>
+    <td></td>
+    <td><form:errors path="p" cssClass="error"/></td>
+    <td><form:errors path="u" cssClass="error"/></td>
+    <td><form:errors path="a" cssClass="error"/></td>
+    <td></td>
+    <td><form:errors path="sposibZahusty" cssClass="error"/></td>
+    <td><form:errors path="typeLichilnuka" cssClass="error" /></td>
+    <td><form:errors path="kilkLichilnika" cssClass="error"/></td>
+    <td><form:errors path="r" cssClass="error"/></td>
+    <td></td>
     </tr>
     </tfoot>
     <tbody>
@@ -128,20 +148,35 @@
     </thead>
     <tfoot>
     <tr>
-    <form:form modelAttribute="anodneZazemlenniaDto" action="/vvedenniaAnod" method="post" acceptCharset="UTF-8">
-        <td> <form:input path="dataMontazhu" type="text" size="5"/></td>
-        <td> <form:input path="typeElectrodiv" type="text" size="5" /></td>
-        <td> <form:input path="vurobnuk" type="text" size="5"/></td>
-        <td> <form:input path="kostrnAzs" type="text" size="5"/></td>
-        <td> <form:input path="ktiElectrodiv" type="text" size="3"/></td>
-        <td> <form:input path="glibinaZaliaginnia" type="text" size="3"/></td>
-        <td> <form:input path="vidstanDoGazoprovody" type="text" size="3"/></td>
-        <td> <form:input path="vidstanDoUkz" type="text" size="3"/></td>
-        <td> <form:input path="dovzhunaAnodnogoPolia" type="text" size="3"/></td>
-        <td> <form:input path="opirRoztikannia" type="text" size="3"/></td>
-        <td> <form:input path="putomuiOpir" type="text" size="3"/></td>
-        <td> <form:input path="budivelnaOrganizazhia" type="text" size="5"/></td>
+    <form:form commandName="anodneZazemlenniaDto" action="/vvedenniaAnod" method="post" acceptCharset="UTF-8">
+        <td> <form:input path="dataMontazhu"  size="5"/></td>
+        <td> <form:input path="typeElectrodiv"  size="5" /></td>
+        <td> <form:input path="vurobnuk"  size="5"/></td>
+        <td> <form:input path="kostrnAzs"  size="5"/></td>
+        <td> <form:input path="ktiElectrodiv"  size="3"/></td>
+        <td> <form:input path="glibinaZaliaginnia"  size="3"/></td>
+        <td> <form:input path="vidstanDoGazoprovody" size="3"/></td>
+        <td> <form:input path="vidstanDoUkz"  size="3"/></td>
+        <td> <form:input path="dovzhunaAnodnogoPolia"  size="3"/></td>
+        <td> <form:input path="opirRoztikannia"  size="3"/></td>
+        <td> <form:input path="putomuiOpir"  size="3"/></td>
+        <td> <form:input path="budivelnaOrganizazhia"  size="5"/></td>
         <td> <form:textarea path="prumitku" rows="2" cols="10"/></td>
+    </tr>
+   <tr style="border: 0px;">
+        <td><form:errors path="dataMontazhu" cssClass="error" /></td>
+        <td><form:errors path="typeElectrodiv" cssClass="error"/></td>
+        <td><form:errors path="vurobnuk" cssClass="error"/></td>
+        <td><form:errors path="kostrnAzs" cssClass="error"/></td>
+        <td><form:errors path="ktiElectrodiv" cssClass="error"/></td>
+        <td><form:errors path="glibinaZaliaginnia" cssClass="error"/></td>
+        <td><form:errors path="vidstanDoGazoprovody" cssClass="error"/></td>
+        <td><form:errors path="vidstanDoUkz" cssClass="error"/></td>
+        <td><form:errors path="dovzhunaAnodnogoPolia" cssClass="error"/></td>
+        <td><form:errors path="opirRoztikannia" cssClass="error"/></td>
+        <td><form:errors path="putomuiOpir" cssClass="error"/></td>
+        <td><form:errors path="budivelnaOrganizazhia" cssClass="error"/></td>
+        <td></td>
     </tr>
     </tfoot>
     <tbody>

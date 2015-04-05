@@ -2,7 +2,6 @@ package com.ukrtechzviaz.ua.controller;
 
 import com.ukrtechzviaz.ua.dto.AnodneZazemlenniaDto;
 import com.ukrtechzviaz.ua.dto.KatodZahDto;
-import com.ukrtechzviaz.ua.dto.LoginDto;
 import com.ukrtechzviaz.ua.manager.AnodneZazemlenniaManager;
 import com.ukrtechzviaz.ua.manager.TehnHaraktKatodnogoZahustyManager;
 import com.ukrtechzviaz.ua.model.AnodneZazemlennia;
@@ -10,10 +9,13 @@ import com.ukrtechzviaz.ua.model.TehnHaraktKatodnogoZahusty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -47,7 +49,8 @@ public class VvedenniaObektivServlet {
         this.tehnHaraktKatodnogoZahustyManager = tehnHaraktKatodnogoZahustyManager;
     }
 
-    @RequestMapping(value = "/index")
+
+    @RequestMapping(value = "/indexVved")
     public String login(Model model,HttpServletRequest request) {
         List<AnodneZazemlennia> listAnodneZazem = anodneZazemlenniaManager.findAll();
         List<TehnHaraktKatodnogoZahusty> listKatodZah = tehnHaraktKatodnogoZahustyManager.findAll();
@@ -60,20 +63,32 @@ public class VvedenniaObektivServlet {
         return "vvedenniaMain";
     }
 
-    @RequestMapping(value = "/vvedenniaAnod")
-    public String addAnodneZezemlennia(@ModelAttribute(value = "anodneZazemlenniaDto")AnodneZazemlenniaDto dto,Model model){
-        anodneZazemlenniaManager.addAnodneZazemlennia(dto.getDataMontazhu(),dto.getTypeElectrodiv(),dto.getVurobnuk(),
-                                                        dto.getKostrnAzs(),dto.getKtiElectrodiv(),dto.getGlibinaZaliaginnia(),dto.getVidstanDoGazoprovody(),
-                                                        dto.getVidstanDoUkz(),dto.getDovzhunaAnodnogoPolia(),dto.getOpirRoztikannia(),dto.getPutomuiOpir(),
-                                                        dto.getBudivelnaOrganizazhia(),dto.getPrumitku());
-        return "redirect:/index";
+    @RequestMapping(value = "/vvedenniaAnod",method = RequestMethod.POST)
+    public String addAnodneZezemlennia(@ModelAttribute("AnodneZazemlenniaDto") @Valid AnodneZazemlenniaDto AnodneZazemlenniaDto,BindingResult result, Model model){
+        if(result.hasErrors())
+            return "indexVved";
+        anodneZazemlenniaManager.addAnodneZazemlennia(AnodneZazemlenniaDto.getDataMontazhu(), AnodneZazemlenniaDto.getTypeElectrodiv(), AnodneZazemlenniaDto.getVurobnuk(),
+                AnodneZazemlenniaDto.getKostrnAzs(), AnodneZazemlenniaDto.getKtiElectrodiv(), AnodneZazemlenniaDto.getGlibinaZaliaginnia(), AnodneZazemlenniaDto.getVidstanDoGazoprovody(),
+                AnodneZazemlenniaDto.getVidstanDoUkz(), AnodneZazemlenniaDto.getDovzhunaAnodnogoPolia(), AnodneZazemlenniaDto.getOpirRoztikannia(), AnodneZazemlenniaDto.getPutomuiOpir(),
+                AnodneZazemlenniaDto.getBudivelnaOrganizazhia(), AnodneZazemlenniaDto.getPrumitku());
+        return "redirect:/indexVved";
     }
 
-    @RequestMapping(value = "/vvedenniaKat")
-    public String addKatoKatodZah(@ModelAttribute(value = "KatodZahDto")KatodZahDto dto,Model model){
-        tehnHaraktKatodnogoZahustyManager.add(dto.getDateMontazhu(),dto.getTypePeretvoriuvacha(),dto.getVurobnuk(),dto.getDataVupysky(),
-                                                dto.getNumberZavodskii(),dto.getTypePokruttia(),dto.getP(),dto.getU(),dto.isTelecontrol(),dto.getSposibZahusty(),
-                                                dto.getTypeLichilnuka(),dto.getKilkLichilnika(),dto.getR(),dto.getPrumitka(),dto.getA());
-        return "redirect:/index";
+    @RequestMapping(value = "/vvedenniaKat", method = RequestMethod.POST)
+    public String addKatoKatodZah(@ModelAttribute("KatodZahDto") @Valid KatodZahDto KatodZahDto,BindingResult result, Model model){
+        if(result.hasErrors()){
+            List<AnodneZazemlennia> listAnodneZazem = anodneZazemlenniaManager.findAll();
+            List<TehnHaraktKatodnogoZahusty> listKatodZah = tehnHaraktKatodnogoZahustyManager.findAll();
+            model.addAttribute("listAnodneZazemlennia",listAnodneZazem);
+            model.addAttribute("listKatodnuiZah", listKatodZah);
+            model.addAttribute("anodneZazemlenniaDto",new AnodneZazemlenniaDto());
+            model.addAttribute("KatodZahDto",new KatodZahDto());
+            model.addAttribute("telecontdolCheck",new Boolean[]{true,false});
+            return "vvedenniaMain";
+        }
+        tehnHaraktKatodnogoZahustyManager.add(KatodZahDto.getDateMontazhu(), KatodZahDto.getTypePeretvoriuvacha(), KatodZahDto.getVurobnuk(), KatodZahDto.getDataVupysky(),
+                                                KatodZahDto.getNumberZavodskii(), KatodZahDto.getTypePokruttia(), KatodZahDto.getP(), KatodZahDto.getU(), KatodZahDto.isTelecontrol(), KatodZahDto.getSposibZahusty(),
+                                                KatodZahDto.getTypeLichilnuka(), KatodZahDto.getKilkLichilnika(), KatodZahDto.getR(), KatodZahDto.getPrumitka(), KatodZahDto.getA());
+        return "redirect:/indexVved";
     }
 }

@@ -38,8 +38,10 @@ public class MainServlet {
 
     @RequestMapping(value = "/login")
     public String login(@ModelAttribute("loginDto")LoginDto loginDto, Model model,HttpServletRequest request){
-        boolean vvedennia = accessChecker.accessVvedenniaTehnichnuxObectiv(loginDto.getLogin(),loginDto.getPass());
-        boolean zvitnist = accessChecker.accessZvitnist(loginDto.getLogin(),loginDto.getPass());
-        return "redirect:/index";
+        Boolean vvedennia = accessChecker.accessVvedenniaTehnichnuxObectiv(loginDto.getLogin(),loginDto.getPass());
+        Boolean zvitnist = accessChecker.accessZvitnist(loginDto.getLogin(),loginDto.getPass());
+        model.addAttribute("vvedennia",vvedennia);
+        model.addAttribute("zvitnist",vvedennia);
+        return "main";
     }
 }

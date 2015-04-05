@@ -1,5 +1,11 @@
 package com.ukrtechzviaz.ua.dto;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import java.util.Date;
 
 /**
@@ -9,33 +15,71 @@ public class AnodneZazemlenniaDto {
 
     private int id;
 
+    @DateTimeFormat(pattern="MM/dd/yyyy")
+    @Past
     private Date dataMontazhu;
 
+    @NotEmpty
     private String typeElectrodiv;
 
+    @NotEmpty
     private String vurobnuk;
 
+    @NotEmpty
     private String kostrnAzs;
 
-    private int ktiElectrodiv;
+    @Range(min = 0)
+    private Integer ktiElectrodiv;
 
-    private int glibinaZaliaginnia;
+    @Range(min = 0)
+    private Integer glibinaZaliaginnia;
 
-    private int vidstanDoGazoprovody;
+    @Range(min = 0)
+    private Integer vidstanDoGazoprovody;
 
-    private int vidstanDoUkz;
+    @Range(min = 0)
+    private Integer vidstanDoUkz;
 
-    private int dovzhunaAnodnogoPolia;
+    @Range(min = 0)
+    private Integer dovzhunaAnodnogoPolia;
 
-    private int opirRoztikannia;
+    @Range(min = 0)
+    private Integer opirRoztikannia;
 
-    private int putomuiOpir;
+    @Range(min = 0)
+    private Integer putomuiOpir;
 
+    @NotEmpty
     private String budivelnaOrganizazhia;
 
     private String prumitku;
 
     public AnodneZazemlenniaDto() {
+    }
+
+    public AnodneZazemlenniaDto(int id, Date dataMontazhu, String typeElectrodiv, String vurobnuk, String kostrnAzs, int ktiElectrodiv, int glibinaZaliaginnia, int vidstanDoGazoprovody, int vidstanDoUkz, int dovzhunaAnodnogoPolia, int opirRoztikannia, int putomuiOpir, String budivelnaOrganizazhia, String prumitku) {
+        this.id = id;
+        this.dataMontazhu = dataMontazhu;
+        this.typeElectrodiv = typeElectrodiv;
+        this.vurobnuk = vurobnuk;
+        this.kostrnAzs = kostrnAzs;
+        this.ktiElectrodiv = ktiElectrodiv;
+        this.glibinaZaliaginnia = glibinaZaliaginnia;
+        this.vidstanDoGazoprovody = vidstanDoGazoprovody;
+        this.vidstanDoUkz = vidstanDoUkz;
+        this.dovzhunaAnodnogoPolia = dovzhunaAnodnogoPolia;
+        this.opirRoztikannia = opirRoztikannia;
+        this.putomuiOpir = putomuiOpir;
+        this.budivelnaOrganizazhia = budivelnaOrganizazhia;
+        this.prumitku = prumitku;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Date getDataMontazhu() {
@@ -70,59 +114,59 @@ public class AnodneZazemlenniaDto {
         this.kostrnAzs = kostrnAzs;
     }
 
-    public int getKtiElectrodiv() {
+    public Integer getKtiElectrodiv() {
         return ktiElectrodiv;
     }
 
-    public void setKtiElectrodiv(int ktiElectrodiv) {
+    public void setKtiElectrodiv(Integer ktiElectrodiv) {
         this.ktiElectrodiv = ktiElectrodiv;
     }
 
-    public int getGlibinaZaliaginnia() {
+    public Integer getGlibinaZaliaginnia() {
         return glibinaZaliaginnia;
     }
 
-    public void setGlibinaZaliaginnia(int glibinaZaliaginnia) {
+    public void setGlibinaZaliaginnia(Integer glibinaZaliaginnia) {
         this.glibinaZaliaginnia = glibinaZaliaginnia;
     }
 
-    public int getVidstanDoGazoprovody() {
+    public Integer getVidstanDoGazoprovody() {
         return vidstanDoGazoprovody;
     }
 
-    public void setVidstanDoGazoprovody(int vidstanDoGazoprovody) {
+    public void setVidstanDoGazoprovody(Integer vidstanDoGazoprovody) {
         this.vidstanDoGazoprovody = vidstanDoGazoprovody;
     }
 
-    public int getVidstanDoUkz() {
+    public Integer getVidstanDoUkz() {
         return vidstanDoUkz;
     }
 
-    public void setVidstanDoUkz(int vidstanDoUkz) {
+    public void setVidstanDoUkz(Integer vidstanDoUkz) {
         this.vidstanDoUkz = vidstanDoUkz;
     }
 
-    public int getDovzhunaAnodnogoPolia() {
+    public Integer getDovzhunaAnodnogoPolia() {
         return dovzhunaAnodnogoPolia;
     }
 
-    public void setDovzhunaAnodnogoPolia(int dovzhunaAnodnogoPolia) {
+    public void setDovzhunaAnodnogoPolia(Integer dovzhunaAnodnogoPolia) {
         this.dovzhunaAnodnogoPolia = dovzhunaAnodnogoPolia;
     }
 
-    public int getOpirRoztikannia() {
+    public Integer getOpirRoztikannia() {
         return opirRoztikannia;
     }
 
-    public void setOpirRoztikannia(int opirRoztikannia) {
+    public void setOpirRoztikannia(Integer opirRoztikannia) {
         this.opirRoztikannia = opirRoztikannia;
     }
 
-    public int getPutomuiOpir() {
+    public Integer getPutomuiOpir() {
         return putomuiOpir;
     }
 
-    public void setPutomuiOpir(int putomuiOpir) {
+    public void setPutomuiOpir(Integer putomuiOpir) {
         this.putomuiOpir = putomuiOpir;
     }
 

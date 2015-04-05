@@ -17,4 +17,6 @@ public interface TehnHaraktKatodnogoZahustyDao {
     TehnHaraktKatodnogoZahusty get(int zavodNumber) throws NoSuchMainSpecificationException;
 
     List<TehnHaraktKatodnogoZahusty> getAll();
+
+    TehnHaraktKatodnogoZahusty fint(int id);
 }

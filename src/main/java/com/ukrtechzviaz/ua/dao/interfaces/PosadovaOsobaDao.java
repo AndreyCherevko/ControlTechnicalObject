@@ -10,4 +10,5 @@ public interface PosadovaOsobaDao {
     void create(PosadoviOsobu posadoviOsobu);
 
     PosadoviOsobu get(String login,String pass);
+
 }

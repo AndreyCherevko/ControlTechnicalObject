@@ -14,4 +14,6 @@ public interface AnodneZazemlenniaDao {
     void update(int id,AnodneZazemlennia anodneZazemlennia);
 
     List<AnodneZazemlennia> getAll();
+
+    AnodneZazemlennia find(int id);
 }

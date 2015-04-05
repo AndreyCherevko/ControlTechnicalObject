@@ -30,4 +30,9 @@ public class NazvuKompanii {
     public void setNazva(String nazva) {
         this.nazva = nazva;
     }
+
+    @Override
+    public String toString() {
+        return nazva ;
+    }
 }

@@ -23,9 +23,6 @@ public class EksplyatazhiinuiKontrol {
     @Column(name="data_kontrol")
     private Date dataKontrol;
 
-    @Column(name="vremia_kontrol")
-    private Date vremiaKontrol;
-
     @Column(name="pochankovia_robotu_strym")
     private int pochankovaRobotaStrymy;
 
@@ -65,9 +62,8 @@ public class EksplyatazhiinuiKontrol {
     public EksplyatazhiinuiKontrol() {
     }
 
-    public EksplyatazhiinuiKontrol(Passport passport, Date dataKontrol, Date vremiaKontrol, int pochankovaRobotaStrymy, int pochankovaRobotaNaprygu, int pochankoviiPotenzhvklvkl, int pochankoviiPotenzhvklvukl, int vstanovlenuiStrymRobotu, int vstanobleniiRobotaNuprygu, int vstanovlenuiiPotenzhvkl, int vstanovlenuiiPotenzhvukl, int p, int pokazhLIchilnukaChasy, int chasProst, String prumitku) {
+    public EksplyatazhiinuiKontrol(Passport passport, Date dataKontrol, int pochankovaRobotaStrymy, int pochankovaRobotaNaprygu, int pochankoviiPotenzhvklvkl, int pochankoviiPotenzhvklvukl, int vstanovlenuiStrymRobotu, int vstanobleniiRobotaNuprygu, int vstanovlenuiiPotenzhvkl, int vstanovlenuiiPotenzhvukl, int p, int pokazhLIchilnukaChasy, int chasProst, String prumitku) {
         this.dataKontrol = dataKontrol;
-        this.vremiaKontrol = vremiaKontrol;
         this.pochankovaRobotaStrymy = pochankovaRobotaStrymy;
         this.pochankovaRobotaNaprygu = pochankovaRobotaNaprygu;
         this.pochankoviiPotenzhvklvkl = pochankoviiPotenzhvklvkl;
@@ -88,14 +84,6 @@ public class EksplyatazhiinuiKontrol {
 
     public void setDataKontrol(Date dataKontrol) {
         this.dataKontrol = dataKontrol;
-    }
-
-    public Date getVremiaKontrol() {
-        return vremiaKontrol;
-    }
-
-    public void setVremiaKontrol(Date vremiaKontrol) {
-        this.vremiaKontrol = vremiaKontrol;
     }
 
     public int getPochankovaRobotaStrymy() {

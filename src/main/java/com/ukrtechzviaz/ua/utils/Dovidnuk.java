@@ -54,11 +54,11 @@ public class Dovidnuk {
         this.nazvuFiliiDao = nazvuFiliiDao;
     }
 
-    public List<GazoprovidName> getGazoprovidNames() throws NoSuchGazoprovidNameException {
+    public List<GazoprovidName> getGazoprovidNames() {
         return gazoprovidNameDao.getAll();
     }
 
-    public GazoprovidName getGazoprovidName(String name) throws NoSuchGazoprovidNameException {
+    public GazoprovidName getGazoprovidName(String name)  {
         return gazoprovidNameDao.get(name);
     }
 

@@ -21,8 +21,7 @@ public class ZagalniDani {
     private Passport passport;
 
     @Column(name = "sposib_zahusty", length = 25)
-    @Enumerated(EnumType.STRING)
-    TupRemonty protectType;
+    String protectType;
 
     @Column(name="geografichna_priviazha",length = 15)
     private String geografichnaPriviazhka;
@@ -47,7 +46,7 @@ public class ZagalniDani {
         return passport;
     }
 
-    public ZagalniDani(Passport passport, TupRemonty protectType, String geografichnaPriviazhka, Date startEcspl, String projectOrganization, String bmOrganization, String zemlekorustyvach) {
+    public ZagalniDani(Passport passport, String protectType, String geografichnaPriviazhka, Date startEcspl, String projectOrganization, String bmOrganization, String zemlekorustyvach) {
         this.passport = passport;
         this.protectType = protectType;
         this.geografichnaPriviazhka = geografichnaPriviazhka;
@@ -57,11 +56,11 @@ public class ZagalniDani {
         this.zemlekorustyvach = zemlekorustyvach;
     }
 
-    public TupRemonty getProtectType() {
+    public String getProtectType() {
         return protectType;
     }
 
-    public void setProtectType(TupRemonty protectType) {
+    public void setProtectType(String protectType) {
         this.protectType = protectType;
     }
 

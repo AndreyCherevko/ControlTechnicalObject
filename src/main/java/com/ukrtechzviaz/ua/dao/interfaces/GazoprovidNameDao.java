@@ -12,7 +12,7 @@ public interface GazoprovidNameDao {
 
     void create(GazoprovidName name);
 
-    GazoprovidName get(String name) throws NoSuchGazoprovidNameException;
+    GazoprovidName get(String name) ;
 
     List<GazoprovidName> getAll();
 }

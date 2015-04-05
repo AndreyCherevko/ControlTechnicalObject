@@ -18,6 +18,8 @@ public class TehnHaraktKatodnogoZahustyDaoImpl implements TehnHaraktKatodnogoZah
 
     private final String GET="from TehnHaraktKatodnogoZahusty";
     private final String GET_ALL="from TehnHaraktKatodnogoZahusty";
+    private final String GET_ID="from TehnHaraktKatodnogoZahusty t where t.id= :id";
+
     @Autowired
     private EntityManagerFactory entityManagerFactory;
 
@@ -59,5 +61,12 @@ public class TehnHaraktKatodnogoZahustyDaoImpl implements TehnHaraktKatodnogoZah
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         List<TehnHaraktKatodnogoZahusty> mainSpecName = entityManager.createQuery(GET_ALL).getResultList();
         return mainSpecName;
+    }
+
+    @Override
+    public TehnHaraktKatodnogoZahusty fint(int id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<TehnHaraktKatodnogoZahusty> mainSpecName = entityManager.createQuery(GET_ID).setParameter("id",id).getResultList();
+        return mainSpecName.get(0);
     }
 }
