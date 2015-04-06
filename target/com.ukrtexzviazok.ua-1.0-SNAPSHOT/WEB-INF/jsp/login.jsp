@@ -12,7 +12,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
-    <title>CaxapOK</title>
+    <title>Формування звітності експлуатації обладнання</title>
 </head>
 <body>
 <form:form modelAttribute="loginDto" action="/login" method="post">

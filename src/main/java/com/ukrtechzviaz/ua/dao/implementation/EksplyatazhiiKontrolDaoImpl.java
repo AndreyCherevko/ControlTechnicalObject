@@ -30,11 +30,8 @@ public class EksplyatazhiiKontrolDaoImpl implements EksplyatazhiinuiKontrolDao {
 
 
     @Override
-    public void create(EksplyatazhiinuiKontrol eksplyatazhiinuiKontrol) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
+    public void create(EksplyatazhiinuiKontrol eksplyatazhiinuiKontrol, EntityManager entityManager) {
         entityManager.persist(eksplyatazhiinuiKontrol);
-        entityManager.getTransaction().commit();
     }
 
     @Override

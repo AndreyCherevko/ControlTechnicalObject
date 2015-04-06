@@ -34,4 +34,8 @@ public class AccessChecker {
         PosadoviOsobu posadoviOsobu = dao.get(login, pass);
         return posadoviOsobu.isZvitnist();
     }
+
+    public PosadoviOsobu get(String login, String pass){
+        return dao.get(login,pass);
+    }
 }

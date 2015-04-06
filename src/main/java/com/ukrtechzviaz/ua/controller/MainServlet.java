@@ -40,8 +40,9 @@ public class MainServlet {
     public String login(@ModelAttribute("loginDto")LoginDto loginDto, Model model,HttpServletRequest request){
         Boolean vvedennia = accessChecker.accessVvedenniaTehnichnuxObectiv(loginDto.getLogin(),loginDto.getPass());
         Boolean zvitnist = accessChecker.accessZvitnist(loginDto.getLogin(),loginDto.getPass());
-        model.addAttribute("vvedennia",vvedennia);
-        model.addAttribute("zvitnist",vvedennia);
+        request.getSession().setAttribute("author",accessChecker.get(loginDto.getLogin(),loginDto.getPass()));
+        request.getSession().setAttribute("vvedennia", vvedennia);
+        request.getSession().setAttribute("zvitnist",vvedennia);
         return "main";
     }
 }

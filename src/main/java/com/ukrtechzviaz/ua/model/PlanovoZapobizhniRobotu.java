@@ -23,14 +23,16 @@ public class PlanovoZapobizhniRobotu {
     private Date kinzhevaDataRemonty;
 
     @Column(name = "vud_remonty", length = 25)
-    @Enumerated(EnumType.STRING)
-    private TupRemonty type;
+    private String type;
 
     @Column(name = "opus_provedenux_robit",length = 200)
     private String opusRobit;
 
     @Column(name="vstanovlenui_rezhim_ykz")
     private int vstanRezhimUkz;
+
+    @Column(name="vstanovlenui_rezhim_ykz_u")
+    private int vstanRezhimUkzU;
 
     @Column(name = "potenzhial_trybu_vkl_ykz")
     private int vvimknP;
@@ -51,16 +53,18 @@ public class PlanovoZapobizhniRobotu {
     public PlanovoZapobizhniRobotu() {
     }
 
-    public PlanovoZapobizhniRobotu(Passport passport, Date pochatkovaDataRemonty, Date kinzhevaDataRemonty, TupRemonty type, String opusRobit, int vstanRezhimUkz, int vvimknP, int vvumkP, int anodR, int zahR) {
+    public PlanovoZapobizhniRobotu(Date pochatkovaDataRemonty, Date kinzhevaDataRemonty, String type, String opusRobit, int vstanRezhimUkz, int vstanRezhimUkzU, int vvimknP, int vvumkP, int anodR, int zahR, Passport passport) {
         this.pochatkovaDataRemonty = pochatkovaDataRemonty;
         this.kinzhevaDataRemonty = kinzhevaDataRemonty;
         this.type = type;
         this.opusRobit = opusRobit;
         this.vstanRezhimUkz = vstanRezhimUkz;
+        this.vstanRezhimUkzU = vstanRezhimUkzU;
         this.vvimknP = vvimknP;
         this.vvumkP = vvumkP;
         this.anodR = anodR;
         this.zahR = zahR;
+        this.passport = passport;
     }
 
     public Date getPochatkovaDataRemonty() {
@@ -79,11 +83,11 @@ public class PlanovoZapobizhniRobotu {
         this.kinzhevaDataRemonty = kinzhevaDataRemonty;
     }
 
-    public TupRemonty getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(TupRemonty type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -149,5 +153,13 @@ public class PlanovoZapobizhniRobotu {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getVstanRezhimUkzU() {
+        return vstanRezhimUkzU;
+    }
+
+    public void setVstanRezhimUkzU(int vstanRezhimUkzU) {
+        this.vstanRezhimUkzU = vstanRezhimUkzU;
     }
 }

@@ -2,6 +2,7 @@ package com.ukrtechzviaz.ua.dao.interfaces;
 
 import com.ukrtechzviaz.ua.model.AnodneZazemlennia;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 /**

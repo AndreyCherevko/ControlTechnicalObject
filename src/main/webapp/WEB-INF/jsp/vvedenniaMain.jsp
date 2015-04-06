@@ -201,5 +201,12 @@
 </table>
 <input type="submit" value="Додати"/>
 </form:form>
+<c:if test="${vvedennia}">
+    <input type=button onClick="location.href='/indexVved'" value='Введення технічних об`єктів'>
+</c:if>
+<c:if test="${zvitnist}">
+    <input type=button onClick="location.href='/indexZvit'" value='Звітність'>
+</c:if>
+<input type=button onClick="location.href='/indexPeregliad'" value='Перегляд паспортів'>
 </body>
 </html>

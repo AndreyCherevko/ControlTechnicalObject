@@ -17,6 +17,8 @@ public class PassportDaoImpl implements PassportDao {
 
     private final String GET="from Passport p where p.id = :id";
 
+    private final String GET_ALL="from Passport";
+
     @Autowired
     private EntityManagerFactory entityManagerFactory;
 
@@ -32,11 +34,8 @@ public class PassportDaoImpl implements PassportDao {
     }
 
     @Override
-    public int create(Passport passport) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
+    public int create(Passport passport, EntityManager entityManager) {
         entityManager.persist(passport);
-        entityManager.getTransaction().commit();
         return passport.getId();
     }
 
@@ -50,5 +49,12 @@ public class PassportDaoImpl implements PassportDao {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         List<Passport> gazoprovidName = entityManager.createQuery(GET).setParameter("id",id).getResultList();
         return gazoprovidName.get(0);
+    }
+
+    @Override
+    public List<Passport> getAll() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<Passport> gazoprovidName = entityManager.createQuery(GET_ALL).getResultList();
+        return gazoprovidName;
     }
 }

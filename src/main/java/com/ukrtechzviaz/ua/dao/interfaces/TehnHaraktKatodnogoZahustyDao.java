@@ -3,6 +3,7 @@ package com.ukrtechzviaz.ua.dao.interfaces;
 import com.ukrtechzviaz.ua.exception.NoSuchMainSpecificationException;
 import com.ukrtechzviaz.ua.model.TehnHaraktKatodnogoZahusty;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 /**

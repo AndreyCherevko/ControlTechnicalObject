@@ -5,9 +5,6 @@
     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
     <display-name>Введення технічних об'єктів. Формування звітності щодо обладнання</display-name>
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>
@@ -15,7 +12,6 @@
         </servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
         <url-pattern>/</url-pattern>

@@ -2,6 +2,7 @@ package com.ukrtechzviaz.ua.controller;
 
 import com.ukrtechzviaz.ua.dto.EksKontrolDto;
 import com.ukrtechzviaz.ua.dto.PassportDto;
+import com.ukrtechzviaz.ua.dto.PlanovoZapobizhniRemontuDto;
 import com.ukrtechzviaz.ua.dto.ZagalniDaniDto;
 import com.ukrtechzviaz.ua.exception.BrokenQueuePassportBuilderException;
 import com.ukrtechzviaz.ua.manager.AnodneZazemlenniaManager;
@@ -64,7 +65,7 @@ public class StvorenniaZvituServlet {
         model.addAttribute("listGazName",listGazName);
         model.addAttribute("passportDto",new PassportDto());
 
-        return "insertPassport";
+        return "/insertPassport";
     }
 
     @RequestMapping(value = "/insertPassport")
@@ -72,18 +73,17 @@ public class StvorenniaZvituServlet {
         if(result.hasErrors()){
             return "redirect:indexZvit";
         }
-
         builder.addPassport(dto.getKatod(),dto.getAnod(),dto.getCompanyName(),dto.getFilialName(),
-                            dto.getPidrozdilName(),dto.getGazoprovidName(),dto.getKmGazoprovid(),dto.getMisto());
+                            dto.getPidrozdilName(),dto.getGazoprovidName(),dto.getKmGazoprovid(),dto.getMisto(),(PosadoviOsobu)request.getSession(false).getAttribute("author"));
         model.addAttribute("zagalniDaniDto",new ZagalniDaniDto());
-        return "insertZagalniDani";
+        return "/insertZagalniDani";
     }
 
     @RequestMapping(value = "/insertZagalniDani")
     public String addZagalniDani(@ModelAttribute("zagalniDaniDto") @Valid ZagalniDaniDto dto,BindingResult result,Model model) {
         if (result.hasErrors()) {
             model.addAttribute("zagalniDaniDto", new ZagalniDaniDto());
-            return "insertZagalniDani";
+            return "/insertZagalniDani";
         }
         try {
             builder.addZagalniDani(dto.getProtectType(), dto.getGeografichnaPriviazhka(), dto.getStartEcspl(), dto.getProjectOrganization(),
@@ -92,13 +92,13 @@ public class StvorenniaZvituServlet {
             return "redirect:/indexZvit";
         }
         model.addAttribute("EksKontrolDto",new EksKontrolDto());
-        return "insertEksplyatKontrol";
+        return "/insertEksplyatKontrol";
     }
     @RequestMapping(value = "/insertEksKontrol")
-    public String addEksKontrol(@ModelAttribute("insertEksKontrol") @Valid EksKontrolDto dto,BindingResult result,Model model) {
+    public String addEksKontrol(@ModelAttribute("EksKontrolDto") @Valid EksKontrolDto dto,BindingResult result,Model model) {
         if (result.hasErrors()) {
-            model.addAttribute("zagalniDaniDto", new ZagalniDaniDto());
-            return "insertZagalniDani";
+            model.addAttribute("EksKontrolDto", new EksKontrolDto());
+            return "/insertEksplyatKontrol";
         }
         try {
             builder.addEksplyatKontrol(dto.getDataKontrol(),dto.getPochankovaRobotaStrymy(),dto.getPochankovaRobotaNaprygu(),
@@ -107,8 +107,34 @@ public class StvorenniaZvituServlet {
         } catch (BrokenQueuePassportBuilderException e) {
             return "redirect:/indexZvit";
         }
-        model.addAttribute("EksKontrolDto",new EksKontrolDto());
-        return "insertEksplyatKontrol";
+        model.addAttribute("PlanovoZapobizhniRemontuDto",new PlanovoZapobizhniRemontuDto());
+        return "/insertPlanovoZapobRemontu";
     }
 
+    @RequestMapping(value = "/insertPlanovoZapobizhniRemontu")
+    public String addPlanovoZapRemontu(@ModelAttribute("PlanovoZapobizhniRemontuDto") @Valid PlanovoZapobizhniRemontuDto dto,BindingResult result,Model model) {
+        if (result.hasErrors()) {
+            model.addAttribute("PlanovoZapobizhniRemontuDto", new PlanovoZapobizhniRemontuDto());
+            return "/insertPlanovoZapobRemontu";
+        }
+        try {
+            builder.addPlanovoZapobizhniRobotu(dto.getPochatkovaDataRemonty(),dto.getKinzhevaDataRemonty(),dto.getType(),dto.getOpusRobit(),
+                                                dto.getVstanRezhimUkz(),dto.getVstanRezhimUkzU(),dto.getVvimknP(),dto.getVvumkP(),dto.getAnodR(),dto.getZahR());
+        } catch (BrokenQueuePassportBuilderException e) {
+            return "redirect:/indexZvit";
+        }
+        model.addAttribute("anodneZazemlennia", builder.getAnod());
+        model.addAttribute("katodnuiZah",builder.getKatod());
+        model.addAttribute("zagalniDani",builder.getZagalniDani());
+        model.addAttribute("ekspKontrol",builder.getEksplyatazhiinuiKontrol());
+        model.addAttribute("planZapRob",builder.getPlanovoZapobizhniRobotu());
+        model.addAttribute("passport",builder.getPassport());
+        model.addAttribute("save",true);
+        return "/peregliadZvitu";
+    }
+    @RequestMapping(value = "/save")
+    public String saveZvit(){
+        builder.saveZvit();
+        return "main";
+    }
 }

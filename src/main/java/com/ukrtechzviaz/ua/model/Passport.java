@@ -1,6 +1,7 @@
 package com.ukrtechzviaz.ua.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by andrey on 01.04.15
@@ -47,11 +48,22 @@ public class Passport {
     @OneToOne(mappedBy = "passport")
     private ZagalniDani zagalniDani;
 
+    @ManyToOne
+    @JoinColumn(name="posadovi_osobu_login")
+    private PosadoviOsobu author;
 
+    @Column(name="data_stvorennia")
+    private Date dataStvorennia = new Date();
+
+    @OneToOne(mappedBy = "passport")
+    private EksplyatazhiinuiKontrol eksplyatazhiinuiKontrol;
+
+    @OneToOne(mappedBy = "passport")
+    private PlanovoZapobizhniRobotu planovoZapobizhniRobotu;
     public Passport() {
     }
 
-    public Passport(TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty, AnodneZazemlennia anodneZazemlennia,NazvuKompanii companyName, NazvuFilii filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto) {
+    public Passport(TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty, AnodneZazemlennia anodneZazemlennia,NazvuKompanii companyName, NazvuFilii filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto, PosadoviOsobu author) {
         this.tehnHaraktKatodnogoZahusty = tehnHaraktKatodnogoZahusty;
         this.anodneZazemlennia = anodneZazemlennia;
         this.companyName = companyName;
@@ -60,6 +72,7 @@ public class Passport {
         this.gazoprovidName = gazoprovidName;
         this.kmGazoprovid = kmGazoprovid;
         this.misto = misto;
+        this.author = author;
     }
 
     public NazvuKompanii getCompanyName() {
@@ -140,5 +153,37 @@ public class Passport {
 
     public void setTehnHaraktKatodnogoZahusty(TehnHaraktKatodnogoZahusty tehnHaraktKatodnogoZahusty) {
         this.tehnHaraktKatodnogoZahusty = tehnHaraktKatodnogoZahusty;
+    }
+
+    public EksplyatazhiinuiKontrol getEksplyatazhiinuiKontrol() {
+        return eksplyatazhiinuiKontrol;
+    }
+
+    public void setEksplyatazhiinuiKontrol(EksplyatazhiinuiKontrol eksplyatazhiinuiKontrol) {
+        this.eksplyatazhiinuiKontrol = eksplyatazhiinuiKontrol;
+    }
+
+    public void setDataStvorennia(Date dataStvorennia) {
+        this.dataStvorennia = dataStvorennia;
+    }
+
+    public PosadoviOsobu getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(PosadoviOsobu author) {
+        this.author = author;
+    }
+
+    public Date getDataStvorennia() {
+        return dataStvorennia;
+    }
+
+    public PlanovoZapobizhniRobotu getPlanovoZapobizhniRobotu() {
+        return planovoZapobizhniRobotu;
+    }
+
+    public void setPlanovoZapobizhniRobotu(PlanovoZapobizhniRobotu planovoZapobizhniRobotu) {
+        this.planovoZapobizhniRobotu = planovoZapobizhniRobotu;
     }
 }

@@ -62,7 +62,7 @@
     <td><form:input path="startEcspl" type="text" size="5"/></td>
     <td><form:input path="projectOrganization" type="text" size="5"/></td>
     <td><form:input path="bmOrganization" type="text" size="5"/></td>
-    <td><form:input path="zemlekorustyvach" type="text" size="5"/></td>
+    <td><form:input path="zemlekorustyvach" type="text" size="7"/></td>
     </tr>
         </tbody>
     </table>

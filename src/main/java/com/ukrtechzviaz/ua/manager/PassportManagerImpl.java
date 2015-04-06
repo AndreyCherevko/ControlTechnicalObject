@@ -1,10 +1,12 @@
 package com.ukrtechzviaz.ua.manager;
 
-import com.ukrtechzviaz.ua.dao.PassportDao;
+import com.ukrtechzviaz.ua.dao.interfaces.PassportDao;
 import com.ukrtechzviaz.ua.model.GazoprovidName;
 import com.ukrtechzviaz.ua.model.Passport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by andrey on 01.04.15.
@@ -25,12 +27,22 @@ public class PassportManagerImpl implements PassportManager {
     }
 
     @Override
-    public void addPassport(String companyName, String filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto) {
-        dao.create(new Passport(companyName,filialName,pidrozdilName,gazoprovidName,kmGazoprovid,misto));
+    public int addPassport(String companyName, String filialName, String pidrozdilName, GazoprovidName gazoprovidName, int kmGazoprovid, String misto) {
+       return 0;
     }
 
     @Override
     public void changePassport(String companyName, String filialName, String pidrozdilName, GazoprovidName gazoprovidName, int diamedrGazoprovodu, int kmGazoprovid, String misto) {
 
+    }
+
+    @Override
+    public Passport find(int id) {
+        return dao.get(id);
+    }
+
+    @Override
+    public List<Passport> fintAll() {
+        return dao.getAll();
     }
 }

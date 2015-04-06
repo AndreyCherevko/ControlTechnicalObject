@@ -29,11 +29,8 @@ public class ZagalniDaniDaoImpl implements ZagalniDaniDao {
     }
 
     @Override
-    public void create(ZagalniDani zagalniDani) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
+    public void create(ZagalniDani zagalniDani, EntityManager entityManager) {
         entityManager.persist(zagalniDani);
-        entityManager.getTransaction().commit();
     }
 
     @Override

@@ -18,7 +18,7 @@ public class KatodZahDto {
     @DateTimeFormat(pattern="MM/dd/yyyy")
     private Date dateMontazhu;
 
-    @NotEmpty(message = "?? ???? ?? ???? ???? ??????")
+    @NotEmpty
     private String typePeretvoriuvacha;
 
     @NotEmpty

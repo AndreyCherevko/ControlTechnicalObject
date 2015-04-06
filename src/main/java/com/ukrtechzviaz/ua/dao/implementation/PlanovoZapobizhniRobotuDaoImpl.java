@@ -29,11 +29,8 @@ public class PlanovoZapobizhniRobotuDaoImpl implements PlanovoZapobizhniRobotuDa
     }
 
     @Override
-    public void create(PlanovoZapobizhniRobotu planovoZapobizhniRobotu) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
+    public void create(PlanovoZapobizhniRobotu planovoZapobizhniRobotu, EntityManager entityManager) {
         entityManager.persist(planovoZapobizhniRobotu);
-        entityManager.getTransaction().commit();
     }
 
     @Override

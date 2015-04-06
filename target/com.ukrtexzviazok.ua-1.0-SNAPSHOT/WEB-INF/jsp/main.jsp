@@ -20,5 +20,6 @@
     <c:if test="${zvitnist}">
         <input type=button onClick="location.href='/indexZvit'" value='Звітність'>
     </c:if>
+        <input type=button onClick="location.href='/indexPeregliad'" value='Перегляд паспортів'>
 </body>
 </html>

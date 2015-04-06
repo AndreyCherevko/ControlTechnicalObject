@@ -16,7 +16,6 @@ public class AnodneZazemlenniaDto {
     private int id;
 
     @DateTimeFormat(pattern="MM/dd/yyyy")
-    @Past
     private Date dataMontazhu;
 
     @NotEmpty

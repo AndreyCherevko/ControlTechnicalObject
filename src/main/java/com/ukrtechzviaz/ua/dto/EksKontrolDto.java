@@ -53,7 +53,6 @@ public class EksKontrolDto {
     public EksKontrolDto() {
     }
 
-
     public Date getDataKontrol() {
         return dataKontrol;
     }

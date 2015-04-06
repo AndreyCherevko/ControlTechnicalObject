@@ -60,13 +60,14 @@ public class VvedenniaObektivServlet {
         model.addAttribute("KatodZahDto",new KatodZahDto());
         model.addAttribute("telecontdolCheck",new Boolean[]{true,false});
 
-        return "vvedenniaMain";
+        return "/vvedenniaMain";
     }
 
     @RequestMapping(value = "/vvedenniaAnod",method = RequestMethod.POST)
     public String addAnodneZezemlennia(@ModelAttribute("AnodneZazemlenniaDto") @Valid AnodneZazemlenniaDto AnodneZazemlenniaDto,BindingResult result, Model model){
-        if(result.hasErrors())
-            return "indexVved";
+        if(result.hasErrors()) {
+            return "redirect:/vvedenniaMain";
+        }
         anodneZazemlenniaManager.addAnodneZazemlennia(AnodneZazemlenniaDto.getDataMontazhu(), AnodneZazemlenniaDto.getTypeElectrodiv(), AnodneZazemlenniaDto.getVurobnuk(),
                 AnodneZazemlenniaDto.getKostrnAzs(), AnodneZazemlenniaDto.getKtiElectrodiv(), AnodneZazemlenniaDto.getGlibinaZaliaginnia(), AnodneZazemlenniaDto.getVidstanDoGazoprovody(),
                 AnodneZazemlenniaDto.getVidstanDoUkz(), AnodneZazemlenniaDto.getDovzhunaAnodnogoPolia(), AnodneZazemlenniaDto.getOpirRoztikannia(), AnodneZazemlenniaDto.getPutomuiOpir(),
@@ -84,7 +85,7 @@ public class VvedenniaObektivServlet {
             model.addAttribute("anodneZazemlenniaDto",new AnodneZazemlenniaDto());
             model.addAttribute("KatodZahDto",new KatodZahDto());
             model.addAttribute("telecontdolCheck",new Boolean[]{true,false});
-            return "vvedenniaMain";
+            return "/vvedenniaMain";
         }
         tehnHaraktKatodnogoZahustyManager.add(KatodZahDto.getDateMontazhu(), KatodZahDto.getTypePeretvoriuvacha(), KatodZahDto.getVurobnuk(), KatodZahDto.getDataVupysky(),
                                                 KatodZahDto.getNumberZavodskii(), KatodZahDto.getTypePokruttia(), KatodZahDto.getP(), KatodZahDto.getU(), KatodZahDto.isTelecontrol(), KatodZahDto.getSposibZahusty(),

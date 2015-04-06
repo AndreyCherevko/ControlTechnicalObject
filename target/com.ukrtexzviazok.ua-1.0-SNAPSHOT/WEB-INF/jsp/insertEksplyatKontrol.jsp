@@ -74,7 +74,6 @@
         <tbody>
         <tr>
             <td><form:input path="dataKontrol" type="text" size="5"/></td>
-            <td><form:input path="vremiaKontrol" type="text" size="5"/></td>
             <td><form:input path="pochankovaRobotaStrymy" type="text" size="5"/></td>
             <td><form:input path="pochankovaRobotaNaprygu" type="text" size="5"/></td>
             <td><form:input path="pochankoviiPotenzhvklvkl" type="text" size="5"/></td>
