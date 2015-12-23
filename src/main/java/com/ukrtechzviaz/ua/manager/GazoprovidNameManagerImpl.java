@@ -1,6 +1,6 @@
 package com.ukrtechzviaz.ua.manager;
 
-import com.ukrtechzviaz.ua.dao.GazoprovidNameDao;
+import com.ukrtechzviaz.ua.dao.interfaces.GazoprovidNameDao;
 import com.ukrtechzviaz.ua.exception.NoSuchGazoprovidNameException;
 import com.ukrtechzviaz.ua.model.GazoprovidName;
 import org.springframework.beans.factory.annotation.Autowired;

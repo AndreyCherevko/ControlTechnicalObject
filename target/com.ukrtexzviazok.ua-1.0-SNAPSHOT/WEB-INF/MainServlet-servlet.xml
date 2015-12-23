@@ -38,4 +38,10 @@
         <property name="prefix" value="WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+    <bean id="messageSource"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="messages" />
+
+    </bean>
 </beans>
