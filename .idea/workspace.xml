@@ -2,159 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e019186e-5dcd-4723-8c6f-f7dd19270d07" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_0_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/Run.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/AnodneZazemlenniaDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/AnodneZazemlenniaDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/EksplyatazhiiKontrolDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/EksplyatazhiinuiKontrolDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/GazoprovidNameDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/GazoprovidNameDaoImp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/MainSpecificationDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/MainSpecificationDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/OdunutisaObladnanniaDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/OdunutsiaObladnanniaDaopImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/PassportDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/PassportDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/PlanovoZapobizhniRobotuDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/PlanovoZapobizhniRobotuDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/TehnHaraktKatodnogoZahustyDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/TehnHaraktKatodnogoZahustyDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/TitleDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/dao/TitleDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/MainSpecificationManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/MainSpecificationManagerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/OdunutsiaObladnanniaManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/OdunutsiaObladnanniaManagerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/PlanovoZapobizhniRobotuManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/PlanovoZapobizhniRobotuManagerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/TitleManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/TitleManagerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/model/EksplyatazhiiKontrolManagerImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/view/Menu.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/app-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/app-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/Run.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/AnodneZazemlenniaDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/AnodneZazemlenniaDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/EksplyatazhiiKontrolDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/EksplyatazhiinuiKontrolDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/GazoprovidNameDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/GazoprovidNameDaoImp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/MainSpecificationDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/MainSpecificationDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/NazVuKompaniiDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/NazvuFiliiDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/NazvuFiliiDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/NazvuKompaniiDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/PassportDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/PassportDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/PlanovoZapobizhniRobotuDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/PlanovoZapobizhniRobotuDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/TehnHaraktKatodnogoZahustyDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/TehnHaraktKatodnogoZahustyDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/TitleDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/TitleDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/ZagalniDaniDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/ZagalniDaniDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/manager/MainSpecificationManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/manager/MainSpecificationManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/manager/TitleManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/manager/TitleManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/view/Menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/app-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/Run.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/GazoprovidNameDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/GazoprovidNameDaoImp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/filter/SessionFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/GeneralInformation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/OperationControll.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/PlanPretWork.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/view/Menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/jsp/insertZegalniDani.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-context-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-core-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-web-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-3.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/index.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_4_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/controller/StvorenniaZvituServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/controller/StvorenniaZvituServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/controller/VvedenniaObektivServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/controller/VvedenniaObektivServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/AnodneZazemlenniaDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/AnodneZazemlenniaDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/GazoprovidNameDaoImp.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/GazoprovidNameDaoImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuFiliiDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuFiliiDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuKompaniiDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuKompaniiDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/PassportDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/PassportDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/PosadovaOsobaDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/PosadovaOsobaDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/TehnHaraktKatodnogoZahustyDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/dao/implementation/TehnHaraktKatodnogoZahustyDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/manager/GazoprovidNameManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/manager/GazoprovidNameManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/ProtectType.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/ProtectType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/ProtectTypeCovering.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/ProtectTypeCovering.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/RemontyType.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/RemontyType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/TupRemonty.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/TupRemonty.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/TupZahusnogoPokruttia.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/TupZahusnogoPokruttia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/ZahusnePokruttia.class" afterPath="$PROJECT_DIR$/target/classes/com/ukrtechzviaz/ua/model/ZahusnePokruttia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/controller/StvorenniaZvituServlet.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/controller/StvorenniaZvituServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/controller/VvedenniaObektivServlet.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/controller/VvedenniaObektivServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/AnodneZazemlenniaDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/AnodneZazemlenniaDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/GazoprovidNameDaoImp.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/GazoprovidNameDaoImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuFiliiDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuFiliiDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuKompaniiDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/NazvuKompaniiDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/PassportDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/PassportDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/PosadovaOsobaDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/PosadovaOsobaDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/TehnHaraktKatodnogoZahustyDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/dao/implementation/TehnHaraktKatodnogoZahustyDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/MainSpecification.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/MainSpecification.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/ProtectType.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/ProtectType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/ProtectTypeCovering.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/ProtectTypeCovering.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/RemontyType.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/RemontyType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/Title.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/Title.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/TupRemonty.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/TupRemonty.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/TupZahusnogoPokruttia.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/TupZahusnogoPokruttia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/ZahusnePokruttia.class" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/com/ukrtechzviaz/ua/model/ZahusnePokruttia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ControlTechnicalObject_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ControlTechnicalObject_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ControlTechnicalObject.iml" afterPath="$PROJECT_DIR$/ControlTechnicalObject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/GazoprovidNameManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/ukrtechzviaz/ua/manager/GazoprovidNameManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/app.properties" afterPath="$PROJECT_DIR$/src/main/resources/app.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/MainServlet-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/MainServlet-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app.properties" afterPath="$PROJECT_DIR$/target/classes/app.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/MainServlet-servlet.xml" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/MainServlet-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/app.properties" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/classes/app.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/com.ukrtexzviazok.ua-1.0-SNAPSHOT/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="ControlTechnicalObject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1314,12 +1162,12 @@
       <workItem from="1450704140370" duration="1593000" />
       <workItem from="1450814834536" duration="3332000" />
       <workItem from="1450877770502" duration="1004000" />
-      <workItem from="1450880867518" duration="220000" />
+      <workItem from="1450880867518" duration="546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139219000" />
+    <option name="totallyTimeSpent" value="139545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
